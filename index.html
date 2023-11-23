@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokedex</title>
+    <link rel="icon" href="./sprites/pokeball_Title.png">
+    <link rel="stylesheet" href="pokedex.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Press+Start+2P">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+</head>
+<body id="forest">
+    <header>
+        <div id="pokemonLogo">
+            <a href="index.html"><img src="./sprites/Pokédex_logo.png" alt="pokedexLogo" id="pokedex_logo"></a>
+        </div>
+    </header>
+    <main>
+        <div id="firstDiv">
+            <div class="sensor">
+                <button></button>
+            </div>
+            <div id="firstDiv_Info">
+                <h1>¡Bienvenidos!<h1>
+                        <p>Tutorial de como usar la Pokedex:</p>
+                        <ul id="listaTutorial">
+                            <li>Busca el nombre del pokémon que quieras y luego pulsa "Agregar al Equipo"</li>
+                            <li>Podrás ver el nombre, el ID y el tipo</li>
+                            <li>Puedes utilizar las flechas de la pokedex para cambiar las imagenes de los pokémon</li>
+                            <li>Puedes resetear el equipo armado pulsando el boton "Resetear Equipo"</li>
+                        </ul>
+                        <button class="StartButton" onclick="mostrarContenido()">Haz click para empezar</button>
+                        <button class="LegalButton" onclick="mostrarInfo()">?</button>
+            </div>
+            <div id="infoLegal">
+                <p>Proyecto final de Lautaro Cruz. <br> 
+                    Todos los recursos utilizados en este proyecto son solo como objetivo de práctica
+                    y sin fines de lucro. 
+                    Pókemon & The Pokémon Company son una marca de Game Freak©</p>
+                    <a href="https://github.com/LautaroCruz1" target="_blank">Github</a>
+                    <a href="https://instagram.com/lauta_ezequiel9" target="_blank">Instagram</a>
+            </div>
+        </div>
+        <div id="pokedex">
+            <div class="sensor">
+                <button></button>
+            </div>
+            <form id="pokemonForm">
+                <label for="pokemonName">Nombre del Pokémon:</label>
+                <input type="text" id="pokemonName" required placeholder="Buscar Pokémon...">
+            </form>
+            <button id="agregarPokemon" class="agregarAlEquipo black-button" onclick="agregarPokemon()">Agregar al
+                Equipo</button>
+            <button id="resetearEquipo" class="resetearEquipo black-button" onclick="limpiarStorage()">Resetear
+                Equipo</button>
+            <div class="camera-display">
+                <div id="carouselExample" class="carousel slide">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample"
+                        data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExample"
+                        data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+            </div>
+            <div class="divider"></div>
+            <div class="stats-display">
+                <h4>Equipo Pokémon:</h4>
+                <div id="equipoLista"></div>
+            </div>
+            <div class="botom-actions">
+                <div id="actions">
+                    <button class="a"></button>
+                </div>
+                <div id="cross">
+                    <button class="cross-button up"></button>
+                    <button class="cross-button right"></button>
+                    <button class="cross-button down"></button>
+                    <button class="cross-button left"></button>
+                    <div class="cross-button center"></div>
+                </div>
+                <div class="bottom-modes">
+                    <button class="level-button"></button>
+                    <button class="level-button"></button>
+                    <button class="level-button"></button>
+                    <button class="level-button"></button>
+                </div>
+            </div>
+    </main>
+    <script src="final.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
